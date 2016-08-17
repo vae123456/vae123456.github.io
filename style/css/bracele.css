@@ -1,0 +1,756 @@
+/* CSS Document */
+*{
+	padding:0px;
+	margin:0px;
+	text-decoration:none;
+	list-style:none;
+	font-family:"微软雅黑";
+	}
+a{
+	color:#000000;
+	}
+i{
+	display:inline-block;
+	font-style:normal;
+	}
+body{
+	position:relative;
+	height:100%;
+	overflow:hidden;
+	}
+.main{
+	position:relative;
+	margin:0 auto;
+	overflow:hidden;
+	background:#f5f5f5;
+	}
+/**/
+.logo{
+	width:100%;
+	height:100px;
+	background:#ffffff url(../img/LOGO1.jpg) no-repeat 75px center;
+	z-index:9;
+	}
+.main_left{
+	width:45%;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	}	
+.main_left .img{
+	width:100%;
+	display:block;
+	}
+.main_right{
+	position:absolute;
+	width:30%;
+	top:100px;
+	right:0px;
+	}	
+.main_right img{
+	width:100%;
+	display:block;
+	}
+/*登录框*/
+.step{
+	position:absolute;
+	top: 70px;
+    left: 100%;
+	width:600px;
+	height:550px;
+	overflow:hidden;
+	margin-left:-75px;
+	}	
+/*手环申请步骤*/
+.step_logo{
+	text-align:center;
+	padding:15px 0px;
+	}
+.move{
+	position:relative;
+	width:100%;
+	}
+.move:after{
+	content:'';
+	display:block;
+	clear:both;
+	}
+.move i{
+	height:40px;
+	width:1px;
+	position:absolute;
+	background:#ffffff;
+	}
+.move .hr1{
+	left:33.33%;
+	}
+.move .hr2{
+	left:66.66%;
+	}
+.move a{
+	display:block;
+	float:left;
+	width:33.333%;
+	background:#c9c9c9;
+	color:#ffffff;
+	font-size:14px;
+	font-weight:bold;
+	text-indent:1em;
+	height:40px;
+	line-height:40px;
+	}
+.move .move_active{
+	background:#00683d;
+	}
+.menu{
+	width:100%;
+	text-align:center;
+	padding:10px 0px 20px 0px;
+	}
+.menu a{
+	display:inline-block;
+	width:8px;
+	height:8px;
+	border-radius:50%;
+	background:#c9c9c9;
+	margin:0px 3px;
+	}
+.menu .menu_active{
+	background:#00683d;
+}
+.tab{
+	position:relative;
+	padding-bottom: 20px;
+	}
+	/*表格*/
+.input_group{
+	width:75%;
+	margin:0 auto;
+	overflow:hidden;
+}
+.number{
+	width:100%;
+	height:60px;
+	position:relative;
+	font-size:14px;
+	margin-bottom:5px;
+	float:left;
+	}
+.number_lable{
+	position:absolute;
+	left: 10px;
+    top: 13px;
+	color:#c9c9c9;
+	}
+.inputGroup{
+	width:100%;
+	height:42px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:1;
+	}
+.number_list{
+	position:absolute;
+	bottom:0px;
+	color:#F00;
+	font-size:12px;
+	text-indent:2px;
+	}
+.inputGroup .number_input{
+	width:280px;
+	height:42px;
+	line-height:42px;
+	outline:none;
+	border:1px solid #00683d;
+	background:0;
+	padding:0px 10px;
+	float:left;
+	}
+	/*推广码的手机号*/
+.inputGroup .text{
+	float: left;
+    width: 118px;
+	color:#c9c9c9;
+    font-size: 12px;
+    margin-left: 15px;
+    margin-top: 10px;
+	}
+	/*获取验证码*/
+.inputGroup .gain{
+	color:#42a467;
+	float:left;
+	margin-left:15px;
+	margin-top:13px;
+	cursor:pointer;
+	text-decoration:underline;
+	border:0;
+	background:0;
+	outline:none;
+	}
+.renovate{
+	float: left;
+    margin-left: 15px;
+	}
+.renovate span{
+	display: block;
+    float: left;
+    width: 90px;
+    height: 42px;
+    background: #099;
+	}
+.renovate i{
+	display: block;
+    width: 18px;
+    height: 15px;
+    background: url(../img/s.jpg) no-repeat;
+    float: left;
+    margin: 12px 0px 0px 15px;
+	cursor:pointer;
+	}
+.hr{
+	width:100%;
+	height:1px;
+	border-bottom:1px dotted #000000;
+	margin-top:10px;
+	}
+	/*按钮*/
+.btn_group{
+	width:240px;
+	margin:0 auto;
+	margin-top:25px;
+	}
+.btn_group .btn{
+	border:0;
+	width:100%;
+	height:42px;
+	line-height:42px;
+	text-align:center;
+	font-size:15px;
+	color:#ffffff;
+	background:#00683d;
+	cursor:pointer;
+	margin-bottom:10px;
+	}
+.btn_group .btn_check{
+	display: inline-block;
+    float: left;
+    margin: 2px 5px;
+	}
+.btn_group .txt{
+	font-size:14px;
+	letter-spacing:1px;
+	color:#a5a5a5;
+	cursor:pointer; 
+	}
+	/*版权所有*/
+.foot{
+	width:100%;
+	height:60px;
+	background:#dbdbdb;
+	position:relative;
+	}	
+.foot .copyright{
+	height:60px;
+	line-height:60px;
+	position:absolute;
+	right:55px;
+	font-size:12px;
+	}
+	/*分享协议*/
+.share{
+	padding:50px 30px 20px 30px;
+	background:#43a468;
+	position:absolute;
+	bottom: 115px;
+	color:#ffffff;
+	font-size:14px;
+	z-index:2;
+	display:none;
+	}
+.share i{
+	width:34px;
+	height:34px;
+	background:#43a468 url(../img/x.png) no-repeat;
+	position:absolute;
+	top:20px;
+	right:20px;
+	}
+.share h3{
+	font-size:24px;
+	margin-bottom:25px;
+	}
+.share ul{
+	padding-left:4em;
+	margin-bottom:20px;
+	}
+.share p{
+	line-height:20px;
+	}
+	/*邮寄信息*/
+.mail{
+	width:332px;
+	margin:0 auto;
+	overflow:hidden;
+	}
+.mail .inputGroup .number_input{
+	width:310px;
+	height:42px;
+	line-height:42px;
+	outline:none;
+	border:1px solid #00683d;
+	background:0;
+	padding:0px 10px;
+	float:left;
+	}	
+.province,.city{
+	width:160px;
+	float:left;
+	}
+.city{
+	margin-left:10px;
+	}
+.province .inputGroup .number_input,.city .inputGroup .number_input{
+	width:140px;
+	}
+	/*二级联动*/
+#province,#city{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border:1px solid #00683d;
+	color: #c9c9c9;
+}
+#province .op,#city .op{
+	
+}
+.address{
+	position:absolute;
+	bottom:-2px;
+	width:100%;
+	text-align:center;
+	font-size:12px;
+	color:#c9c9c9;
+	}
+	/*确认页面*/
+.confirm{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:#ffffff;
+	z-index:2;
+	bottom:0px;
+	display:none;
+	}	
+.consignee{
+	padding:30px 50px;
+	}
+.consignee h3{
+	font-weight:100;
+	color:#565656;
+	font-size:16px;
+	height:30px;
+	line-height:30px;
+	margin-bottom:10px;
+	border-bottom:1px solid #c9c9c9;
+	}
+.consignee ul{
+	color:#565656;
+	}
+.consignee ul li{
+	margin:2px 0px;
+	overflow:hidden;
+	}
+.consignee ul li span{
+	display:block;
+	}
+.confirm_left{
+	display:block;
+	width: 100px;
+    float: left;
+	}
+.confirm_right{
+	display: block;
+    margin-left: 100px;
+	}
+.button{
+	text-align:center;
+	margin-top:40px;
+	}
+.button .button_btn{
+	color:#ffffff;
+	background:#00683d;
+	cursor:pointer;
+	padding:8px 35px;
+	margin:0px 20px;
+	}
+	/*信息确认*/
+.info{
+	padding:0px 60px;
+	}
+.info p{
+	color:#00683d;
+	font-size:16px;
+	margin:15px 0px;
+	}
+.more{
+	text-align:center;
+	margin-top: 40px;
+	}
+.more .more_btn{
+	color:#ffffff;
+	background:#00683d;
+	cursor:pointer;
+	padding:8px 35px;
+	margin:0px 20px;
+	}
+/*媒体查询*/
+/*台式*/
+@media screen and (min-width:1366px){
+.main{
+	min-width:1920px;
+	min-height:780px;
+	}
+}	
+/*笔记本*/
+@media screen and (max-width:1366px){
+.main{
+	min-width:1280px;
+	min-height:600px;
+	}
+.logo{
+	width:100%;
+	height:50px;
+	background:#ffffff url(../img/bLOGO.png) no-repeat 75px center;
+	z-index:9;
+	}
+.main_left{
+	width:40%;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	}
+.main_right{
+	position:absolute;
+	width:20%;
+	top:50px;
+	right:0px;
+	}
+.step {
+    position: absolute;
+    top: -99px;
+    left: 111%;
+    width: 600px;
+    height: 550px;
+    overflow: hidden;
+    margin-left: -75px;
+	}
+.move a{
+	display:block;
+	float:left;
+	width:33.333%;
+	background:#c9c9c9;
+	color:#ffffff;
+	font-size:14px;
+	font-weight:bold;
+	text-indent:1em;
+	height:38px;
+	line-height:38px;
+	}
+.move .move_active{
+	background:#00683d;
+	}
+.menu{
+	width:100%;
+	text-align:center;
+	padding:10px 0px 20px 0px;
+	}
+.menu a{
+	display:inline-block;
+	width:8px;
+	height:8px;
+	border-radius:50%;
+	background:#c9c9c9;
+	margin:0px 3px;
+	}
+.menu .menu_active{
+	background:#00683d;
+}
+.tab{
+	position:relative;
+	padding-bottom: 20px;
+	}
+	/*表格*/
+.input_group{
+	width:75%;
+	margin:0 auto;
+	overflow:hidden;
+}
+.number{
+	width:100%;
+	height:53px;
+	position:relative;
+	font-size:14px;
+	margin-bottom:5px;
+	float:left;
+	}
+.number_lable{
+	position:absolute;
+	left: 10px;
+    top: 10px;
+	color:#c9c9c9;
+	}
+.inputGroup{
+	width:100%;
+	height:35px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:1;
+	}
+.number_list{
+	position:absolute;
+	bottom:0px;
+	color:#F00;
+	font-size:12px;
+	text-indent:2px;
+	}
+.inputGroup .number_input{
+	width:280px;
+	height:35px;
+	line-height:35px;
+	outline:none;
+	border:1px solid #00683d;
+	background:0;
+	padding:0px 10px;
+	float:left;
+	}
+	/*推广码的手机号*/
+.inputGroup .text{
+	float: left;
+    width: 118px;
+	color:#c9c9c9;
+    font-size: 12px;
+    margin-left: 15px;
+    margin-top: 10px;
+	}
+	/*获取验证码*/
+.inputGroup .gain{
+	color:#42a467;
+	float:left;
+	margin-left:15px;
+	margin-top:13px;
+	cursor:pointer;
+	text-decoration:underline;
+	border:0;
+	background:0;
+	outline:none;
+	}
+.renovate{
+	float: left;
+    margin-left: 15px;
+	}
+.renovate span{
+	display: block;
+    float: left;
+    width: 90px;
+    height: 35px;
+    background: #099;
+	}
+.renovate i{
+	display: block;
+    width: 18px;
+    height: 15px;
+    background: url(../img/s.jpg) no-repeat;
+    float: left;
+    margin: 12px 0px 0px 15px;
+	cursor:pointer;
+	}
+.hr{
+	width:100%;
+	height:1px;
+	border-bottom:1px dotted #000000;
+	margin-top:10px;
+	}
+	/*按钮*/
+.btn_group{
+	width:240px;
+	margin:0 auto;
+	margin-top:25px;
+	}
+.btn_group .btn{
+	border:0;
+	width:100%;
+	height:38px;
+	line-height:38px;
+	text-align:center;
+	font-size:15px;
+	color:#ffffff;
+	background:#00683d;
+	cursor:pointer;
+	margin-bottom:10px;
+	}
+.btn_group .btn_check{
+	display: inline-block;
+    float: left;
+    margin: 2px 5px;
+	}
+.btn_group .txt{
+	font-size:14px;
+	letter-spacing:1px;
+	color:#a5a5a5;
+	}
+	/*分享协议*/
+.share{
+	padding:50px 30px 20px 30px;
+	background:#43a468;
+	position:absolute;
+	bottom: 115px;
+	color:#ffffff;
+	font-size:14px;
+	z-index:2;
+	display:none;
+	}
+.share i{
+	width:34px;
+	height:34px;
+	background:#43a468 url(../img/x.png) no-repeat;
+	position:absolute;
+	top:20px;
+	right:20px;
+	}
+.share h3{
+	font-size:24px;
+	margin-bottom:25px;
+	}
+.share ul{
+	padding-left:4em;
+	margin-bottom:20px;
+	}
+.share p{
+	line-height:20px;
+	}
+	/*邮寄信息*/
+.mail{
+	width:332px;
+	margin:0 auto;
+	overflow:hidden;
+	}
+.mail .inputGroup .number_input{
+	width:310px;
+	height:35px;
+	line-height:35px;
+	outline:none;
+	border:1px solid #00683d;
+	background:0;
+	padding:0px 10px;
+	float:left;
+	}	
+.province,.city{
+	width:160px;
+	float:left;
+	}
+.city{
+	margin-left:10px;
+	}
+.province .inputGroup .number_input,.city .inputGroup .number_input{
+	width:140px;
+	}
+.address{
+	position:absolute;
+	bottom:-2px;
+	width:100%;
+	text-align:center;
+	font-size:12px;
+	color:#c9c9c9;
+	}
+	/*确认页面*/
+.confirm{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:#ffffff;
+	z-index:2;
+	bottom:0px;
+	display:none;
+	}	
+.consignee{
+	padding:30px 50px;
+	}
+.consignee h3{
+	font-weight:100;
+	color:#565656;
+	font-size:16px;
+	height:30px;
+	line-height:30px;
+	margin-bottom:10px;
+	border-bottom:1px solid #c9c9c9;
+	}
+.consignee ul{
+	color:#565656;
+	}
+.consignee ul li{
+	margin:2px 0px;
+	overflow:hidden;
+	}
+.consignee ul li span{
+	display:block;
+	}
+.confirm_left{
+	display:block;
+	width: 100px;
+    float: left;
+	}
+.confirm_right{
+	display: block;
+    margin-left: 100px;
+	}
+.button{
+	text-align:center;
+	margin-top:40px;
+	}
+.button .button_btn{
+	color:#ffffff;
+	background:#00683d;
+	cursor:pointer;
+	padding:8px 35px;
+	margin:0px 20px;
+	}
+	/*信息确认*/
+.info{
+	padding:0px 60px;
+	}
+.info p{
+	color:#00683d;
+	font-size:16px;
+	margin:15px 0px;
+	}
+.more{
+	text-align:center;
+	margin-top: 40px;
+	}
+.more .more_btn{
+	color:#ffffff;
+	background:#00683d;
+	cursor:pointer;
+	padding:8px 35px;
+	margin:0px 20px;
+	}
+/*版权所有*/
+.foot{
+	width:100%;
+	height:30px;
+	background:#dbdbdb;
+	position:relative;
+	}	
+.foot .copyright{
+	height:30px;
+	line-height:30px;
+	position:absolute;
+	right:55px;
+	font-size:12px;
+	}
+}	
+	
+	
+	
