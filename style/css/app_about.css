@@ -1,0 +1,77 @@
+/* CSS Document */
+.about_menu .menu_info{
+	font-size:14px;
+	}
+/*企业简介*/
+.about_abstract{
+	margin-top:10px;
+	font-size:14px;
+	line-height:20px;
+	}
+/*招贤纳士*/
+.app_video .recruit{
+	padding-top:0px;
+	}
+/*联系我们*/	
+.touch_map{
+	padding:10px 0px 0px 45px;
+	background:url(../img/about/address.png) no-repeat;
+	background-position:0px 10px;
+	}
+.touch_map ul h5{
+	font-weight:100;
+	padding:2px 0px 5px 0px;
+	color:#333333;
+	}	
+.touch_map ul li{
+	color:#666666;
+	font-size:14px;
+	}
+/*乘车路线*/
+.touch_bus{
+	padding:10px 0px 0px 45px;
+	background:url(../img/about/bus.png) no-repeat;
+	background-position:0px 10px;
+	}
+.touch_bus ul h5{
+	font-weight:100;
+	padding:2px 0px 5px 0px;
+	color:#333333;
+	}	
+.touch_bus ul li{
+	color:#666666;
+	font-size:14px;
+	}
+/*联系方式*/
+.touch_phone{
+	padding:10px 0px 0px 45px;
+	background:url(../img/about/phone.png) no-repeat;
+	background-position:0px 10px;
+	}
+.touch_phone ul h5{
+	font-weight:100;
+	padding:2px 0px 5px 0px;
+	color:#333333;
+	}	
+.touch_phone ul li{
+	color:#333333;
+	font-size:14px;
+	font-weight:bold;
+	}
+/*电子邮箱*/
+.touch_email{
+	padding:10px 0px 0px 45px;
+	background:url(../img/about/email.png) no-repeat;
+	background-position:0px 10px;
+	}
+.touch_email ul h5{
+	font-weight:100;
+	padding:2px 0px 5px 0px;
+	color:#333333;
+	}	
+.touch_email ul li{
+	color:#666666;
+	font-size:14px;
+	}	
+	
+	

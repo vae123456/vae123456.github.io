@@ -1,0 +1,541 @@
+/* CSS Document */
+*{
+	padding:0px;
+	margin:0px;
+	list-style:none;
+	text-decoration:none;
+	font-family:"微软雅黑";
+	}
+a{
+	color:#000000;
+	}
+/*LOGO*/
+.logo{
+	padding:0px 20px;
+	height:50px;
+	}
+.logo .logo_img{
+	float:left;
+	width:auto;
+	height:50px;
+	display:flex;
+	}
+.logo .logo_img img{
+	max-height:40px;
+	display:block;
+	margin:auto;
+	}
+.logo .logo_phone{
+	float:right;
+	width:auto;
+	height:50px;
+	display:flex;
+	text-align:right;
+	}
+.logo .logo_phone img{
+	max-height:25px;
+	display:block;
+	margin:auto;
+	}
+.logo:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+/*轮播图*/
+/*.app_box{
+	width:100%;
+	height:auto;
+	position:relative;
+	overflow:hidden;
+	}
+.app_box ul{
+	overflow:hidden;
+	transition:1s linear all;
+	}
+.app_box li{
+		display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+	}
+.app_box li img{
+	width:100%;
+	display:block;
+	}
+.app_load li:not(:first-child){
+	display: none;
+}*/
+.swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+.swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }    
+.swiper-slide img{
+	width:100%;
+	display:block;
+	}
+
+/*.menu{
+	position:absolute;
+	bottom:6px;
+	text-align:center;
+	width:100%;
+	}
+.menu a{
+	height: 12px;
+    width: 12px;
+    border-radius: 6px;
+    background:#ffffff;;
+    margin: 0px 5px;
+    display: inline-block;
+	}
+.menu .menu_active{
+	background:#f77128;
+	}*/
+.swiper-container>.swiper-pagination{
+	bottom:5%;
+	}
+.swiper-pagination .swiper-pagination-bullet{
+	background:#ffffff;
+	height: 8px;
+    width: 8px;
+    border-radius: 6px;
+	opacity:1;
+	}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+	margin:0px 10px;
+	}
+.swiper-pagination .swiper-pagination-bullet-active{
+	background:#f77128;
+	} 
+.swiper-container:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+/*活动视频*/
+.app_video{
+	padding:0px 20px;
+	margin-bottom:83px;
+	}
+.app_video:after{
+	content:"";
+    display: block;
+    clear: both;
+	}
+.app_video .video_head{
+	padding:15px 0px;
+	} 
+.video_head .head_title{
+	font-size:16px;
+	font-weight:bold;
+	border-left:3px solid #f77128;
+	float:left;
+	text-indent:10px;
+	color:#333333;
+	}
+.video_head .head_add{
+	float:right;
+	font-size:14px;
+	margin-top:5px;
+	display:block;
+	color:#666666;
+	}
+.video_head:after{
+	content:"";
+    display: block;
+    clear: both;
+	}
+.video_center{
+	position:relative;
+	width:100%;
+	height:auto;
+	}
+.video_center .video_img{
+	width:100%;
+	display:block;
+	}
+.video_detial{
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	background:rgba(0,0,0,0.6);
+	}
+.video_detial .p_span{
+	color:#ffffff;
+	display:block;
+	padding:5px 5px;
+	font-size:14px;
+	}
+.video_center .vide0_btn{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0px;
+	display:flex;
+	}
+.video_center .vide0_btn img{
+	display:block;
+	width:16%;
+	margin:auto;
+	}
+/*旅游路线*/	
+.tour{
+	width:100%;
+	-webkit-perspective: 500;
+	-webkit-transform-style: preserve-3d;
+	overflow:hidden;
+	max-width:750px;
+	margin:0 auto;
+	}
+.tour:after{
+	content:"";
+	clear:both;
+	display:block;
+	}
+.tour .tour_info{
+	float:left;
+	height:auto;
+	-webkit-perspective: 500;
+	-webkit-transform-style: preserve-3d;
+	}
+.tour .tour_info{
+	display:none;
+	}
+.tour .tour_info:nth-child(1){
+	-webkit-transform:translateZ(-75px) rotateY(-30deg);
+	width:42%;
+	margin-left:-14%;
+	margin-top:-5px;
+	display:block;
+	}
+.tour .tour_info:nth-child(2){
+	-webkit-transform:translateZ(0px);
+	width:40%;
+	position:absolute;
+	left:50%;
+	margin-left:-20%;
+	border:2px solid #f77128;
+	display:block;
+	}
+.tour .tour_info:nth-child(3){
+	-webkit-transform: translateZ(-75px) rotateY(30deg);
+	position:absolute;
+	width:42%;
+	right:-15%;
+	top:-5px;
+	display:block;
+	}	
+.tour .tour_info img{
+	width:100%;
+	display:block;
+	-webkit-user-select:none; 
+	-moz-user-select:none; 
+	-ms-user-select:none;
+	 user-select:none;
+	 height:100%;
+	/*-webkit-user-select:none;
+	-moz-user-select:none;
+	user-select:none;*/
+	}
+.tour_info .tour_img1{
+	width:100%;
+	height:auto;
+	background:;
+	background-position:100% auto;
+	}
+.tour .tour_info .tour_p{
+	position:absolute;
+	width:100%;
+	display:none;
+	bottom:0px;
+	font-size:14px;
+	font-weight:bold;
+	background:rgba(0,0,0,0.6);
+	color:#ffffff;
+	padding:5px 0px;
+	}
+.tour .tour_info .tour_p span{
+	padding:0px 5px;
+	}
+.tour .tour_info:nth-child(2) .tour_p{
+	display:block;
+	}
+.tour_info a{
+	display:none;
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:999;
+	}
+.tour .tour_info:nth-child(2) a{
+	display:block;
+	}
+/*酒店推荐*/	
+.hotel{
+	width:100%;
+	}
+.hotel .hotel_info:after{
+	content:"";
+	display:block;
+	clear:both;
+	}
+.hotel .hotel_info{
+	margin-bottom:-10px;
+	width:102%;
+	}
+.hotel ul .hotel_info_item{
+	background:#f6f6f6;
+	float:left;
+	width:48%;
+	margin-right:2%;
+	margin-bottom:10px;
+	}
+	/*图片列表*/
+.hotel_info_item .hotel_img img{
+	width:100%;
+	} 
+.hotel_info_item  .hotel_title{
+	font-size:16px;
+	padding:2px 10px;
+	font-weight:500;
+	color:#333333;
+	} 
+.hotel_info_item .hotel_ser{
+	font-size:12px;
+	margin-bottom:4px;
+	padding:0px 10px;
+	color:#666666;
+	}
+.hotel_ser .ser_img{
+	display:inline-block;
+	margin-right:5px;
+	width:10px;
+	background:url(../img/index/icon1.jpg) no-repeat;
+	background-size:100% auto;
+	height:13px;
+	}
+.hotel_info_item .hotel_money{
+	font-size:12px;
+	color:#F40;
+	padding:0px 10px;
+	font-weight:bold;
+	margin-bottom:4px;
+	}
+.hotel_money i{
+	font-size:14px;
+	font-style:normal;
+	display:inline-block;
+	margin:0px 2px;
+	}
+.hotel ul .hotel_left{
+	float:left;
+	}
+.hotel ul .hotel_right{
+	float:right;
+	}	
+/*新闻动态*/	
+.news{
+	overflow:hidden;
+	}
+.top{
+	margin-top:-12px;
+	}
+.news_info{
+	margin-top:12px;
+	display:block;
+	}
+.news_info:after{
+	content:"";
+	clear:both;
+	display:block;
+	}
+.info_time{
+	width: 60px;
+    float: left;
+    padding: 0px 10px;
+    height: 80px;
+    color: #ffffff;
+    background: #f77128;
+	border-radius:5px;
+	}
+.news_info .day{
+	border-bottom: 1px solid #ffffff;
+    height: 50px;
+    line-height: 50px;
+    font-size: 34px;
+    text-align: center;
+    font-weight: bold;
+	font-family:"Arial Black", Gadget, sans-serif;
+	}
+.news_info .year{
+	height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+	}
+	/*新闻内容*/
+.news_content{
+	margin-left: 90px;
+} 
+.news_content .news_head{
+	font-size: 16px;
+    padding: 3px 0px 6px 0px;
+	color:#747474;
+	}
+.news_content .news_p{
+	font-size:14px;
+	color:#666666;
+	line-height: 17px;
+	text-overflow: 
+	-o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp:3;
+	-webkit-box-orient: vertical;
+	}	
+/*导航菜单*/
+.nav{
+	border-top:1px solid #EDEEF2;
+	position:fixed;
+	width:100%;
+	bottom:0px;
+	background:#ffffff;
+	text-align:center;
+	z-index:9;
+	}
+.nav a{
+	float:left;
+	display:block;
+	text-align:center;
+	height:50px;
+	font-size:14px;
+	color:#353535;
+	position:relative;
+	}	
+.nav .index{
+	width:15.5%;
+	}
+.nav .nav_right{
+	width:19%;
+	}
+.nav a i{
+	background-position:0px 0px;
+	display:block;
+	}
+.nav .home{
+	background:url(../img/index/home.png) no-repeat;
+	width:15px;
+	height:15px;
+	margin:7px auto;
+	}
+.nav .tour{
+	background:url(../img/index/tour.png) no-repeat;
+	width:15px;
+	height:15px;
+	margin:7px auto;
+	}
+.nav .hotel{
+	background:url(../img/index/hotel.png) no-repeat;
+	height:14px;
+	width:13px;
+	margin:7px auto;
+	}
+.nav .penter{
+	background:url(../img/index/penter.png) no-repeat;
+	height:18px;
+	width:13px;
+	margin:6px auto;
+	}
+.nav .company{
+	background:url(../img/index/company.png) no-repeat;
+	width:22px;
+	height:15px;
+	margin:7px auto;
+	}
+.nav .about{
+	background:url(../img/index/about.png) no-repeat;
+	width:15px;
+	height:15px;
+	margin:7px auto;
+	}
+.nav a span{
+	display:block;
+	width:100%;
+	position:absolute;
+	bottom:5px;
+	}	
+.nav .active i{
+	background-position:0px -15px;
+	}
+.nav .active .penter{
+	background-position:0px -18px;
+	}
+.nav .active span{
+	color:#f77128;
+	}
+.ui-loader{
+	display:none;
+	 }
+.hide{
+	display:none;
+	}
+.show{
+	display:block;
+	}
+/*放大的图片*/
+.pop{
+	position:fixed;
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+	z-index:9;
+	display:flex;
+	}
+.pop .pop_img{
+	position:absolute;
+	z-index:2;
+	display:flex;
+	width:100%;
+	height:100%;
+	}
+.pop .pop_img img{
+	max-width:100%;
+	display:block;
+	margin:auto;
+	}
+.pop .pop_bg{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.2)
+	}

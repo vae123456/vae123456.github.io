@@ -1,0 +1,62 @@
+/* CSS Document */
+.hotel .hotel_center{
+	margin-bottom:70px;
+	}
+.hotel_serve{
+	padding:0px 10px;
+	font-size:14px;
+	color:#333333;
+	margin-bottom:4px;
+	}
+/*酒店展示*/
+.hotel_show{
+	margin-right:-3%;
+	position:relative;
+	}
+.hotel_show:after{
+	display:block;
+	content:"";
+	clear:both;
+	}
+.hotel_show .show_info{
+	padding:5px 3% 5px 0px;
+	width:47%;
+	float:left;
+	}
+.info_img{
+	padding:10px;
+	position:relative;
+	}
+.info_img .img_left{
+	position:absolute;
+	left:0px;
+	top:0px;
+	background:url(../img/hotel/left.png) no-repeat;
+	width:50px;
+	height:70px;
+	}
+.info_img .img_right{
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	background:url(../img/hotel/right.png) no-repeat;
+	width:50px;
+	height:70px;
+	}
+.info_img img{
+	display:block;
+	width:100%;
+	}
+.info_img .img_text{
+	display:block;
+	padding:5px 5px;
+	background:#EBEEF5;
+	color:#2D2E32;
+	font-size:14px;
+	}
+
+
+
+
+
+
