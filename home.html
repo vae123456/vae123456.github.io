@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link href="style/css/home.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="box" class="box">
+	<div class="list" id="list">
+		<div class="into">
+			<!--<p>秘密通知，今天晚上，请各家各户锁好门，关好窗，并确保烟筒通畅，圣诞老人要进行家访，带着好运、吉祥、美满、健康，装睡的同志请不要穿帮，袜子一定要放在床上，等待把礼物装，平安夜快乐!</p>-->
+			<p>圣旨到</p>
+            <p>下面这位小朋友请接旨.</p>
+            <div>
+            	<img width="100%" src="img/0.jpg">
+            </div>
+		</div>
+		<div class="into">2</div>
+		<div class="into">3</div>
+		<div class="into">
+        	<div>戳一戳</div>
+        </div>
+	</div>
+</div>
+<script src="style/js/jquery-1.11.1.min.js"></script>
+<script src="style/js/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		init();
+		function init(){
+			var oWidth=$(window).width();
+			var oHeight=$(window).height();
+			var $aInto=$('.into');
+			var oBox=document.getElementById('box');
+			$('.into').css({'height':oHeight});
+			$('.box').css({'width':oWidth,'height':oHeight});
+			document.ontouchmove=function(ev){
+				ev.preventDefault();
+			}
+			var downY=0;
+			var downTop=0;
+			var iNow=0;
+			oBox.ontouchstart=function(ev){
+				var touchs=ev.changedTouches[0];
+				downY=touchs.pageY;
+				downTop=$(this).children('#list').offset().top;
+				oBox.ontouchmove=function(ev){
+					var touchs=ev.changedTouches[0];
+					var oTop=touchs.pageY-downY+downTop;
+					if(oTop>0 || oTop<(-oHeight*3)){
+						return false;	
+					}
+					$(this).children('#list').css('top',oTop);
+				}
+				oBox.ontouchend=function(ev){
+					var touchs=ev.changedTouches[0];
+					if((touchs.pageY+30)<downY){
+						iNow++;
+						if(iNow>$aInto.length-1){
+							iNow=$aInto.length-1;	
+						}
+					}else if((touchs.pageY-30)>downY){
+						iNow--;
+						if(iNow<0){
+							iNow=0;	
+						}
+					}
+					$(this).children('#list').stop().animate({'top':-iNow*oHeight},300);
+					this.ontouchend=null;
+					this.ontouchmove=null;
+				}
+			}
+		}
+	})
+</script>
+</body>
+</html>
