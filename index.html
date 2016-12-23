@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<metaname="x5-orientation"content="portrait">
+<metaname="screen-orientation"content="portrait">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title>下雪动画</title>
+<link href="style/css/home.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src='js/snowfall.jquery.js'></script>
+
+<!--<style type="text/css">
+html,body{padding:0;margin:0;}
+.darkBg{background:#2d0f0f url(images/smashing.jpg) top center no-repeat;}
+.lightBg{background:url(images/snow.jpg) #b1dde0 top center no-repeat;}
+.collectonme{margin:120px auto;width:50%;text-align:center;font-size:1.2em;color:#fff;}
+</style>-->
+
+</head>
+<body class="darkBg">
+
+<!--<input type="button" id="clear" value="点击清除"/>
+<input type="button" id="round" value="圆角"/>
+<input type="button" id="shadows" value="阴影"/>
+<input type="button" id="roundshadows" value="圆润阴影"/>
+<input type="button" id="collection" value="雪集合"/>
+<input type="button" id="deviceorientation" value="Deviceorientation"/>-->
+
+<!--<div class="collectonme">
+	<p>Merry Christmas !!!</p>
+</div>-->
+<!--<div class="collectonme">
+	<p>Collect on meeeeee!!!</p>
+</div>
+<div class="collectonme">
+	<p>Collect on meeeeee!!!</p>
+</div>-->
+<div id="box" class="box">
+	<div class="list" id="list">
+		<div class="into">
+        	<div class="text">
+            	<p class="text_head">Merry Christmas!!!</p>
+                <p class="text_name">XXX:</p>
+                <p class="text_center">平安夜，传喜悦，吉祥氛围飘万里；钟声响，雪花飘，温馨浪漫到你家；隔千山，离万水，友谊在心不会淡；欢喜夜，送祝福，祝你一生永平安。祝平安夜快乐！</p>
+            	<p class="text_to">----XXX</p>
+            </div>
+            
+		</div>
+		<div class="into">2</div>
+		<div class="into">3</div>
+		<div class="into">
+        	<div>戳一戳</div>
+        </div>
+	</div>
+</div>
+<script type='text/javascript'> 	
+$(document).ready(function(){
+	document.ontouchmove=function(ev){
+		ev.preventDefault();
+	}
+	$(document).snowfall();
+	
+	$("#clear").click(function(){
+		$(document).snowfall('clear'); // How you clear
+	});
+	init();
+	function init(){
+		document.body.className  = "darkBg";
+		/*$('.collectonme').hide();*/
+		$(document).snowfall('clear');
+		$(document).snowfall({round : true, minSize: 5, maxSize:8}); // add rounded
+	}
+	$("#round").click(function(){
+		document.body.className  = "darkBg";
+		$('.collectonme').hide();
+		$(document).snowfall('clear');
+		$(document).snowfall({round : true, minSize: 5, maxSize:8}); // add rounded
+	});
+	
+	$("#shadows").click(function(){
+		document.body.className  = "lightBg";
+		$('.collectonme').hide();
+		$(document).snowfall('clear');
+		$(document).snowfall({shadow : true, flakeCount:200}); // add shadows
+	});
+
+	$("#roundshadows").click(function(){
+		document.body.className  = "lightBg";
+		$('.collectonme').hide();
+		$(document).snowfall('clear');
+		$(document).snowfall({shadow : true, round : true,  minSize: 5, maxSize:8}); // add shadows
+	});
+	
+	$("#collection").click(function(){
+		$(document).snowfall('clear');
+		document.body.className  = "darkBg";
+		$('.collectonme').show();
+		$(document).snowfall({collection : '.collectonme', flakeCount : 250});
+	});
+
+	$("#deviceorientation").click(function(){
+		$(document).snowfall('clear');
+		$('.collectonme').hide();
+		document.body.className  = "darkBg";
+		$(document).snowfall({deviceorientation : true, round : true, minSize: 5, maxSize:8});
+	});
+	tab();
+	$(window).resize(function(){
+	   var oWidth=$(window).width();
+	   $('.box').css({'width':oWidth});
+	});
+	function tab(){
+		var oWidth=$(window).width();
+		var oHeight=$(window).height();
+		var $aInto=$('.into');
+		var oBox=document.getElementById('box');
+		$('.into').css({'height':oHeight});
+		$('.box').css({'width':oWidth,'height':oHeight});
+		document.ontouchmove=function(ev){
+			ev.preventDefault();
+		}
+		var downY=0;
+		var downTop=0;
+		var iNow=0;
+		oBox.ontouchstart=function(ev){
+			var touchs=ev.changedTouches[0];
+			downY=touchs.pageY;
+			downTop=$(this).children('#list').offset().top;
+			oBox.ontouchmove=function(ev){
+				var touchs=ev.changedTouches[0];
+				var oTop=touchs.pageY-downY+downTop;
+				if(oTop>0 || oTop<(-oHeight*3)){
+					return false;	
+				}
+				$(this).children('#list').css('top',oTop);
+			}
+			oBox.ontouchend=function(ev){
+				var touchs=ev.changedTouches[0];
+				if((touchs.pageY+30)<downY){
+					iNow++;
+					if(iNow>$aInto.length-1){
+						iNow=$aInto.length-1;	
+					}
+				}else if((touchs.pageY-30)>downY){
+					iNow--;
+					if(iNow<0){
+						iNow=0;	
+					}
+				}
+				$(this).children('#list').stop().animate({'top':-iNow*oHeight},300);
+				this.ontouchend=null;
+				this.ontouchmove=null;
+			}
+			ev.stopPropagation();
+			return false;
+		}
+	}
+});
+</script>
+</body>
+</html>

@@ -21,15 +21,16 @@ sup{font-size:.83em;vertical-align:super;line-height:0}
 *{-webkit-print-color-adjust:exact}
 @media screen and (min-width:914px){body{width:854px;margin:10px auto}}
 @media print{body,code,h1,h2,h3,h4,h5,h6,pre code{color:#000}pre,table{page-break-inside:avoid}}
-.box{overflow:hidden; position: absolute; max-width:854px;}
-.list{background-color: #fff6f6; position: absolute; padding: 20px; width: 100%; box-sizing:border-box;}
-.list .into{}
+.box{overflow:hidden; position:relative; max-width:854px;}
+.list{background-color: #670001; position: absolute;width: 100%; box-sizing:border-box;}
+.list .into{position:relative;}
+.list .into:first-child {background:url(../../images/1.jpg) center center no-repeat;}
 .list .into p{ font-size:20px; line-height:24px;}
-.tobew{position: fixed; bottom: 20px; left: 50%;}
-
-
-
-
+.into .text{color:#ffffff; padding:30px; position:absolute; width:100%; box-sizing:border-box; bottom:0px;top: 37%;}
+.text .text_head{text-align:center; font-size:24px;}
+.text .text_name{font-size:20px;}
+.text .text_center{font-size:20px; text-indent:1em;}
+.text .text_to{ text-align:right;}
 
 
 

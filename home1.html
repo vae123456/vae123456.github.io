@@ -10,12 +10,7 @@
 <div id="box" class="box">
 	<div class="list" id="list">
 		<div class="into">
-			<!--<p>秘密通知，今天晚上，请各家各户锁好门，关好窗，并确保烟筒通畅，圣诞老人要进行家访，带着好运、吉祥、美满、健康，装睡的同志请不要穿帮，袜子一定要放在床上，等待把礼物装，平安夜快乐!</p>-->
-			<p>圣旨到</p>
-            <p>下面这位小朋友请接旨.</p>
-            <div>
-            	<img width="100%" src="img/0.jpg">
-            </div>
+			<iframe src="index1.html" width="100%" height="100%" frameborder="no" border="0" ></iframe>
 		</div>
 		<div class="into">2</div>
 		<div class="into">3</div>
@@ -71,6 +66,8 @@
 					this.ontouchend=null;
 					this.ontouchmove=null;
 				}
+				ev.stopPropagation();
+				return false;
 			}
 		}
 	})
